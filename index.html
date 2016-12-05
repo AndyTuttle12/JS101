@@ -1,0 +1,173 @@
+<script type="text/javascript">
+	
+	//Printing stuff.
+	// window.alert("Hello, World.");
+	
+	// console.log("Hello, World!");
+	// console.dir("Hello, World!");
+
+	// document.write("Hello, World!");
+
+	// A dot followed by () is a METHOD (or function)
+	// If not followed by (), it is a PROPERTY.
+
+	// Data-Types
+	// - Strings - in "" or ''
+	// - Numbers - digits (also float vs integer)
+	// - Booleans - true or false, 1 or 0, on or off
+	// - Arrays - lists
+	// - Objects - variable or variables
+
+	// Strings
+	// var fullName = "Andy Tuttle";
+	// var escapes = "\n \"stuff\" more";
+
+	// console.log(fullName);
+
+	// number
+	// var myAge = 26; //Integer
+	// myAge = 26.79; //Float
+	// var myAgeToString = "myAge";
+
+	//Operators
+	// console.log(myAge + 1);
+	// console.log(myAgeToString + 1); //concatenates to string.
+
+	// var floatNumber = Math.PI;
+
+	// console.log(typeof(floatNumber));
+	// var makeAnInteger = parseInt(floatNumber);
+	// console.log(makeAnInteger);
+	// console.log(.2 + .1);
+
+	//Booleans
+	// var theTruth = true;
+	// console.log(typeof(theTruth));
+
+	//Modulus
+	// var amIEven = parseInt(myAge) % 2;
+	// if (amIEven === 0) {
+	// 	return true;
+	// }
+
+	//add One (increment)
+	// var stuff = myAge
+	// stuff++; //or --
+
+	//prefix ++stuff instead of stuff++
+	//otherwise wait one line for postfix...
+
+	// Order of Operations
+	// ()*/+- l to r
+
+	// var getUserName = prompt("Name?", "Andy");
+	// console.log(getUserName;
+
+	// NO Prompts - use forms and AJAX instead...
+
+	// Conditionals
+
+	// var classSize = 16;
+	// var question = "How big is the class?"
+	// var response = prompt(question, classSize);
+
+	// if(response === 16) {
+	// 	console.log("You are in the Nov Cohort.");
+	// }
+
+	//==, compare if equal
+	//!==, not equal
+	//=== and !=== compare against data-types as well as values.
+	//NaN is a number, but can be found with isNaN()
+
+	// Else and Else if
+	// if(response == 16){
+	// 	console.log("a");
+	// } else if(response == 15){
+	// 	console.log("b");
+	// } else {
+	// 	console.log("c");
+	// }
+
+	// Math
+	// var randNum = Math.random();
+	// console.log(randNum);
+	// var between = Math.ceil(randNum * 10);
+	// console.log(between);
+
+
+	// FUN EXERCISE!!!!
+
+
+	// 	var stuff = prompt("Enter a number between 1 and 10.");
+	// 	var foo = Number(stuff);
+
+	// 	function isANumber(foo){
+	// 		if (foo > 0 || foo < 11){
+	// 			return true;
+	// 			console.log("You entered a number!")
+	// 		} else {
+	// 			return false;
+	// 			console.log("Not a valid response.")
+	// 		}
+	// 	}
+	// 	var response = isANumber(foo);
+	// 	var randomNumber = Math.random();
+	// 	var roundedNum = Math.ceil(randomNumber * 10);
+
+	// 	if (response == true) {
+	// 		if (Number(stuff) == roundedNum) {
+	// 			console.log("Congratulations! You are correct!");
+	// 		} else if (Number(stuff) <= (roundedNum + 2) && stuff >= (roundedNum - 2)) {
+	// 			console.log("Close, but no cigar! The number was " + roundedNum);
+	// 		} else {
+	// 			console.log("Not even close you bafoon!");
+	// 		}
+	// 	} else {
+	// 		prompt("Please enter a NUMBER...")
+	// }
+
+	// Arrays
+	// var student1 = "Sean";
+	// var student2 = "Drew";
+	// var student3 = "Daniel";
+	// var student4 = "Kyle";
+
+	// var students = [];
+	// students = ["Sean", "Drew", "Daniel", "Kyle"];
+
+	// console.log(students);
+
+	// var nfcSouth1 = "Falcons";
+	// var nfcSouth2 = "Saints";
+	// var nfcSouth3 = "Panthers";
+	// var nfcSouth4 = "Bucs";
+
+	// var nfcSouth = [nfcSouth1, nfcSouth2, nfcSouth3, nfcSouth4];
+	// console.log(nfcSouth[3]);
+
+	// // cool methods - push, pop, shift, unshift, slice, splice, etc.
+	// console.log(students.pop());
+	// console.log(students.push("Ryan"));
+
+	var novStudents = ["Connie", "Paul", "Andy", "Mason"];
+	var response = prompt("Name?");
+	var exists = false;
+	console.log(novStudents);
+	console.log(response);
+	for (var i = 0; i < 4; i++) {
+		if (novStudents[i] == response) {
+			exists = true;
+			console.log("You are in the class!");
+			break;
+		}
+	}
+	if (exists == false) {
+		novStudents.push(response);
+		console.log("Hi, " + response + ", you have been added to the list!");
+	}	
+	
+
+
+</script>
+
