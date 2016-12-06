@@ -22,6 +22,22 @@
 
 	console.log(daysInMonth(0, 2016));
 
+	function calcLeapYear(year){
+		if(year % 4 === 0){
+			if(year % 100 !== 0){
+				return 'leap year';
+			}else{
+				if(year % 400 === 0){
+					return 'leap year';
+				}else{
+					return 'not a leap year';
+				}
+			}
+		}else{
+			return 'not a leap year';
+		}
+	}
+
 
 	var billAmount = prompt("How much was the bill?");
 
@@ -36,6 +52,8 @@
 
 	alert("Your bill was, $" + billAmount + " so you should tip this amount: $" + tipAmountGood + " for a good tip. This amount: $" + tipAmountFair + " for a fair tip. And this amount: $" + tipAmountBad + "  for a bad tip.");
 
+
+	
 
 	</script>
 </head>

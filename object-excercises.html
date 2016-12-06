@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var students = [];
+		var student = {}; // Empty object. No props.
+		console.log(student.name);
+
+		student.name = "Andy";
+		console.log(student.name);
+
+		student.age = 26;
+		student.gender = 'Male';
+
+		console.log(student);
+
+		var student2 = {
+			name: "Mason",
+			age: "20",
+			gender: 'Male',
+			favoriteLang: "JS"
+		}
+
+		console.log(student2);
+
+		var student3 = {
+			name: "Paul",
+			languages: [
+				"JavaScript",
+				"Python",
+				"Node",
+				"GO"
+			],
+			skillLevel: {
+				javaScript: "Excellent",
+				python: "Beginner",
+				node: "Warrior",
+				goLang: "Novice"
+			},
+			rightHanded: true,
+			sayHello: function(){
+				alert("Hello, " + this.name);
+			}
+		};
+
+		console.log(student3);
+		console.log(student3.languages[2]);
+		console.log(student3.skillLevel.javaScript);
+		student3.sayHello();
+		students.push(student, student2, student3);
+		console.log(students[2].name);
+
+		for(i = 0; i < students.length; i++){
+			console.log(students[i].name);
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

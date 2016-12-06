@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		
+		var students = ['Sean', 'Drew', 'Daniel', 'Kyle', 'Rishi', 'Liz', 'Anna', 'Ryan', 'Micahel', 'Casey', 'Sarah', 'Amber', 'Connie', 'Paul', 'Andy', 'Mason'];
+
+		var possibleValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+		var pair = [];
+		isFull = false;
+		while (!isFull){
+			// Inside grab 2 random #s from possibleValues.
+			// Remove them.
+			// Keep going to empty.
+			// Once empty, set isFull to true and loop exits.
+
+			var randomOne = Math.ceil(Math.random() * possibleValues.length);
+			// Got one. Remove it. Splice.
+			// 2params: start and delete
+			// start at where we just got. Delete 1
+			possibleValues.splice(randomOne, 1);
+			// Assuming all is well, do it again and pair them up.
+			var randomTwo = Math.ceil(Math.random() * possibleValues.length);
+			possibleValues.splice(randomTwo, 1);
+			
+			pair.push(randomOne);
+			pair.push(randomTwo);
+			console.log(pair);
+			break;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
