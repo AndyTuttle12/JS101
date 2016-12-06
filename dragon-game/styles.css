@@ -1,0 +1,102 @@
+*{
+	font-family: arial;
+}
+
+h1{
+	font-family: arial;
+}
+
+#game-inputs input {
+	width: 100px;
+	font-family: arial;
+	font-weight: bold;
+	line-height: 20px;
+	font-size: 14px;
+	padding: 10px;
+	margin: 30px;
+}
+
+#game-inputs{
+	background-color: #4D6DF3;
+	width: 28%;
+	display: inline-block;
+	border-radius: 5px;
+	margin: 20px 0px;
+}
+
+#game{
+	width: 80%;
+	height: 800px;
+	max-width: 1200px;
+	text-align: center;
+	margin: auto;
+	padding: 0; 
+}
+
+#enemy {
+	display: inline-block;
+	margin: auto;
+
+	width: 100%;
+	max-width: 1200px;
+}
+
+#peasant{
+	display: inline-block;
+	vertical-align: bottom;
+	min-width: 10px;
+	max-width: 100%;
+	background-color: #4D6DF3;
+	border-radius: 5px;
+	padding: 5px;
+	margin: auto;
+}
+
+#scene{
+	background-image: "cave.png";
+}
+
+#opening{
+	display: inline-block;
+}
+
+.hidden {
+	display: none;
+}
+
+#dice {
+	display: none;
+}
+
+#slay {
+	display: none;
+}
+
+#coward {
+	display: none;
+}
+
+#burninate{
+	display: none;
+}
+
+#congratulations{
+	display: none;
+}
+
+
+
+#rollOutcome {
+	display: none;
+	padding: 0px 20px;
+	background-color: #4D6DF3;
+	color: #fff;
+	border: 2px solid #4D6DF3;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+game-over {
+	margin-left: -500px;
+	width: 800px;
+}

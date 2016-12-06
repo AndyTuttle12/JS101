@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fight the Dragon</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="styles.css">
+
+	<script type="text/javascript">
+		function initial(){
+			document.getElementById("slay").style.display = "none";
+			document.getElementById("dice").style.display = "none";
+			document.getElementById("start").style.display = "none";
+			document.getElementById("opening").style.display = "none";
+		}
+
+		function rollDice(){
+			// console.log("test");
+			var randomDie1 = Math.ceil(Math.random() * 6);
+			var randomDie2 = Math.ceil(Math.random() * 6);
+			console.log(randomDie1);
+			console.log(randomDie2);
+
+			document.images.die1.src = "d" + randomDie1 + ".gif";
+			document.images.die2.src = "d" + randomDie2 + ".gif";
+
+			document.getElementById("rollOutcome").style.display = "inline-block";
+			document.getElementById('userRoll').innerHTML = randomDie1 + randomDie2;
+
+			if(randomDie1 + randomDie2 > 10){
+				document.images.trogdor.src = "grats.png";
+				document.getElementById("congratulations").style.display = "inline-block";
+				document.images.hero.src = "Success.png";
+			} else if(randomDie1 + randomDie2 < 4) {
+				document.images.hero.src = "game-over.png";
+				document.getElementById("burninate").style.display = "inline-block";
+				document.getElementById("enemy").style.display = "none";
+			// } else { Here I will add a system for damage and hitpoints.
+
+			}
+
+		}
+
+		function fight(){
+			document.getElementById("leave").style.display = "none";
+			document.getElementById("start").style.display = "none";
+			document.getElementById("opening").style.display = "none";
+			document.getElementById("dice").style.display = "block";
+			document.getElementById("slay").style.display = "inline-block";
+		}
+
+		function flee(){
+			document.getElementById("start").style.display = "none";
+			document.getElementById("leave").style.display = "none";
+			document.getElementById("slay").style.display = "none";
+			document.getElementById("opening").style.display = "none";
+			document.getElementById("dice").style.display = "none";
+			document.getElementById("coward").style.display = "inline-block";
+
+		}
+	</script>
+</head>
+<body>
+
+	<div id="game" onpageshow="initial()">
+		<div id="scene">
+			<div id="enemy">
+				<img name="trogdor" src="trogdor.gif">
+			</div>
+			<div id="peasant">
+				<img name="hero" src="rather-dashing.png">
+			</div>
+		</div>
+		<div id="opening">
+			<h1>You have reached Trogdor, the Burininator! Do you fight?</h1>
+		</div>
+		<div id="coward">
+			<h1>You coward! Run back to your thatched roof cottage!</h1>
+		</div>
+		<div id="burninate">
+			<h1>Trogdor breaths a mighty blow and burninates you to a crisp. You are dead.</h1>
+		</div>
+		<div id="congratulations">
+			<h1>You managed to somehow throw your sword into Trogdor's weak point and killed him! Congratulations, you will go down in history as the bravest of peasants!</h1>
+		</div>
+		<div id="game-inputs">
+			<input id="start" name="fight" type="button" onclick="fight();" value="Fight!">
+			<input id="leave" name="flee" type="button" onclick="flee();" value="Flee!">
+			<input id="slay" name="roll" type="button" onclick="rollDice();" value="Roll the dice!">
+		</div>
+		<div id="dice">
+			<img name="die1" src="d1.gif">
+			<img name="die2" src="d1.gif">
+		</div>
+		<div id="rollOutcome">
+			<h3>You rolled: 
+				<div id="userRoll"></div>
+			</h3>	
+		</div>
+		
+
+	</div>
+
+</body>
+</html>
