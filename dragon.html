@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fight the Dragon</title>
+
+	<script type="text/javascript">
+		
+		function rollDice(){
+			// console.log("test");
+			var randomDie1 = Math.ceil(Math.random() * 6);
+			var randomDie2 = Math.ceil(Math.random() * 6);
+			console.log(randomDie1);
+			console.log(randomDie2);
+
+			document.images.die1.src = "d" + randomDie1 + ".gif";
+			document.images.die2.src = "d" + randomDie2 + ".gif";
+
+			document.getElementById('userRoll').innerHTML = randomDie1 + randomDie2;
+
+			if(randomDie1 + randomDie2 > 10){
+				document.images.hero.src = "Success.png";
+			} else if(randomDie1 + randomDie2 < 4) {
+				document.images.hero.src = "game-over.png";
+				document.input.reset.value = "Play Again?";
+			// } else { Here I will add a system for damage and hitpoints.
+
+			}
+
+		}
+
+		function fight(input){
+			document.getElementById("start").classList.toggle("hidden");
+			document.getElementById("leave").classList.toggle("hidden");
+			document.getElementById("slay").classList.toggle("hidden");
+		}
+
+		function flee(input){
+			document.getElementById("leave").classList.toggle("hidden");
+			document.getElementById("start").classList.toggle("hidden");
+			document.getElementById("slay").classList.toggle("hidden");
+		}
+	</script>
+</head>
+<body>
+
+	<div id="game">
+		<div id="enemy">
+			<img name="trogdor" src="trogdor.gif">
+		</div>
+		<div id="peasant">
+			<img name="hero" src="rather-dashing.png">
+		</div>
+		<div id="opening">
+			<h1>You encountered a dragon. Do you fight?</h1>
+		</div>
+		
+		<div id="dice">
+			<img name="die1" src="d1.gif">
+			<img name="die2" src="d1.gif">
+		</div>
+		<div id="game-inputs">
+			<input id="start" name="fight" type="button" onclick="fight();" value="Fight!">
+			<input id="leave" name="flee" type="button" onclick="flee();" value="Flee!">
+			<input id="slay" class="hidden" name="roll" type="button" onclick="rollDice();" value="Roll the dice!">
+		</div>
+		
+		<div id="userRoll"></div>
+
+	</div>
+
+</body>
+</html>

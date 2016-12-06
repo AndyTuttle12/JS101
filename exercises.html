@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+
+	<script type="text/javascript">
+		
+	var date = new Date();
+	var dayOfWeek = date.getDay();
+	console.log(dayOfWeek);
+
+	if (dayOfWeek > 0 && dayOfWeek < 6) {
+		alert("Go to work.");
+	} else {
+		alert("Sleep in!");
+	}
+
+	function daysInMonth(month, year) {
+		return new Date(year, month, 0).getDate();
+	}
+
+	console.log(daysInMonth(0, 2016));
+
+
+	var billAmount = prompt("How much was the bill?");
+
+	var tipAmountGood = (billAmount * .2);
+	var tipAmountFair = (billAmount * .15);
+	var tipAmountBad = (billAmount * .1);
+
+	parseFloat(billAmount).toFixed(4);
+	parseFloat(tipAmountGood).toFixed(4);
+	parseFloat(tipAmountFair).toFixed(4);
+	parseFloat(tipAmountBad).toFixed(4);
+
+	alert("Your bill was, $" + billAmount + " so you should tip this amount: $" + tipAmountGood + " for a good tip. This amount: $" + tipAmountFair + " for a fair tip. And this amount: $" + tipAmountBad + "  for a bad tip.");
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

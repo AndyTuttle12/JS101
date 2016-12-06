@@ -1,0 +1,22 @@
+ #game{
+	overflow: hidden;
+	width: 70%;
+	height: 500px;
+	max-width: 900px;
+	text-align: center;
+	margin: auto;
+	padding: 0; 
+}
+
+#enemy {
+	float: left;
+}
+
+#peasant{
+	float: right;
+}
+
+.hidden {
+	display: none;
+}
+
